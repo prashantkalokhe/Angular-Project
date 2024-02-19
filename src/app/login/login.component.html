@@ -1,0 +1,90 @@
+<p>login works!</p>
+<!-- <app-pipe-demo></app-pipe-demo> -->
+<button  (click)="show=!show">ClickMe</button><br><br> 
+
+{{'show='+show}}
+
+<div  *ngIf="show">Text to show</div> 
+
+ <button (click)="show=!show">{{show?'Show':'Hide'}}</button><br><br>
+
+
+{{'show= '+show}}
+<div *ngIf="show  else  elseBlock">Text to show</div>
+
+<ng-template  #elseBlock><div>Text to Hide</div> </ng-template> 
+
+  
+Enter the Age=<input type="text" [(ngModel)]="age"><br>
+
+
+<div *ngIf="age>18  else ageCheck">  Person is Eligible for Drive</div>
+
+<ng-template #ageCheck><div>Person is not Eligible</div></ng-template> 
+
+
+
+<!--   Ng Switch Demo -->
+
+<input type="text" [(ngModel)]="color"><br><br>
+<div [ngSwitch]="color">
+
+    <div *ngSwitchCase="'red'"><h1>This is Red</h1></div>
+    <div *ngSwitchCase="'green'"><h2>This is green</h2></div>
+    <div *ngSwitchCase="'blue'"><h3>This is blue</h3></div>
+
+    <div *ngSwitchDefault>Pick one color</div>
+</div><br>
+
+
+<button class="btn btn-primary">ClickMe</button>
+<!-- Program to Check the Greatest of Two Numbers: -->
+
+<div *ngIf="num1>num2; else num2IsGreater">
+<p>{{num1}}is greater than{{num2}}</p>
+</div>    
+<ng-template    #num2IsGreater>
+<p>{{num2}} is greater than {{num1}}</p>
+</ng-template>
+
+<div *ngIf="num1%2===0">
+<p>{{num1}}is even</p>
+</div>
+<div *ngIf="num2%2!==0">
+    <p>{{num2}}is odd</p>
+    </div>  
+    
+    <!-- divisiblke by 5 or not -->
+    <div *ngIf="num1%5===0">
+    <p>{{num1}}is divisible by 5</p>
+    </div>
+    <div *ngIf="num2%5!==0">
+    <p>{{num2}}is not divisible by 5</p>
+    </div>  
+    
+    <!-- divisible by 5 or not -->
+    <div *ngIf="num3%5===0">
+    <p>{{num3}}is divisible by 5</p>
+    </div>
+    <div *ngIf="num3%5!==0">
+    <p>{{num3}}is not divisible by 5</p>
+    </div>  
+    
+    <!-- weekday using ng Switch -->
+    <div>
+        <label for="weekday">Enter a Weekday:</label>
+        <input type="text"  id="weekday" [(ngModel)]="weekdayName">
+    </div>
+    <div [ngSwitch]="weekdayName">
+        <p *ngSwitchCase="'Monday'">Monday!</p>
+        <p *ngSwitchCase="'Tuesday'">Tuesday!</p>
+        <p *ngSwitchCase="'Wednesday'">Wednesday!</p>
+        <p *ngSwitchCase="'Thursday'">Thursday!</p>
+        <p *ngSwitchCase="'Friday'">Friday!</p>
+        <p *ngSwitchCase="'Saturday'">Saturday!</p>
+        <p *ngSwitchCase="'Sunday'">Sunday!</p>
+
+    </div>
+
+   
+  

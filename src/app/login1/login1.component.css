@@ -1,0 +1,47 @@
+ /* Style for form container */
+ .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #620b0b;
+    border-radius: 5px;
+    background-color: #18648a;
+}
+
+/* Style for form labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Style for form inputs */
+input[type="text"], input[type="email"], input[type="radio"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for error messages */
+.error {
+    color: red;
+    margin-top: 5px;
+}
+
+/* Style for submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #61129d;
+    hover-background-color: #45a049;
+}

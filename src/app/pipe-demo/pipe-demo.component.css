@@ -1,0 +1,77 @@
+/* movie.component.css */
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the error message */
+  p {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Style for the list of movies at odd positions */
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Additional styles for odd-positioned movies */
+  li:nth-child(odd) {
+    background-color: #f2f2f2;
+    padding: 5px;
+  }
+
+  
+  /* //Q2 */
+  /* student.component.css */
+
+/* Style for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the error message */
+  p {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Additional styles for table rows */
+  tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Apply background color to table rows */
+  tr:hover {
+    background-color: #f0f0f0;
+  }
+  

@@ -1,0 +1,83 @@
+<p>studentform works! ractive form</p>
+
+
+
+<div style="margin-left: 200px;">
+  <div class="mb-3">
+    <label for="employeeId" class="form-label">Employee Id</label>
+    <input type="text" [(ngModel)]="data1" class="form-control" id="employeeId" placeholder="Employee Id" style="width: 400px;">
+  </div>
+  <div class="mb-3">
+    <label for="employeeName" class="form-label">Employee Name</label>
+    <input type="text" [(ngModel)]="data2" class="form-control" id="employeeName" placeholder="Employee Name" style="width: 400px;">
+  </div>
+  <div class="mb-3">
+    <label for="city" class="form-label">City</label>
+    <input type="text" [(ngModel)]="data3" class="form-control" id="city" placeholder="Current Location" style="width: 400px;">
+  </div>
+  <div>   
+    <button type="button" class="btn btn-success" (click)="addEmployee()">Add Employee</button>
+  </div>
+</div>
+
+<h1>Employee Id: {{dat1}}</h1>
+<h1>Employee Name: {{dat2}}</h1>
+<h1>City: {{dat3}}</h1>
+
+
+
+
+
+
+
+
+<!--employee.component.html -->
+
+<!-- employee.component.html -->
+
+ <!-- <div>
+    <h2>Add Employee</h2>
+    <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
+      <ul>
+        <li>
+          <label for="employeeId">Employee ID:</label>
+          <input type="text" id="employeeId" name="employeeId" [(ngModel)]="employeeId" required>
+        </li>
+        <li>
+          <label for="employeeName">Employee Name:</label>
+          <input type="text" id="employeeName" name="employeeName" [(ngModel)]="employeeName" required>
+        </li>
+        <li>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" [(ngModel)]="city" required>
+        </li>
+      </ul>
+      <button type="submit">Add Employee</button>
+    </form>
+  </div>
+  
+  <div *ngIf="isEmployeeAdded">
+    <p>Employee added successfully!</p>
+  </div>
+  
+  <div>
+    <h2>Employee Details</h2>
+    <table *ngIf="employees.length > 0">
+      <thead>
+        <tr>
+          <th>Eid</th>
+          <th>Ename</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeId }}</td>
+          <td>{{ employee.employeeName }}</td>
+          <td>{{ employee.city }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="employees.length === 0">No employees added yet.</p>
+  </div>
+   -->

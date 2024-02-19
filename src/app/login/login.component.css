@@ -1,0 +1,9 @@
+p{
+    align-items: center;
+    background: #4ab647;
+    background: conic-gradient(from 45deg, hsl(118, 59%, 27%), #a74c4c);
+    width:fit-content;
+}
+a{
+    align-items: center;
+}

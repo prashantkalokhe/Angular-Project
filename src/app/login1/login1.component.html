@@ -1,0 +1,75 @@
+<p>login1 works!</p>
+
+<form  #contactForm="ngForm" (ngSubmit)="contactForm.form.valid && OnSubmit()" novalidate>
+    <div>
+        <label for="firstName">FirstName</label>
+        <input type="text"  name="firstName" required minlength="8" #firstName="ngModel" 
+        [(ngModel)]="MyContact.firstName">
+    </div>
+    <div  *ngIf="!firstName?.valid && (firstName?.dirty||firstName?.touched)" class="error">
+        <div *ngIf="firstName.errors?.['required']">
+            FirstName is Required
+        </div>
+        <div *ngIf="firstName.errors?.['minlength']">
+                FirstName minimum length is{{firstName.errors?.['minlength']?.requiredLength}}
+        </div>
+
+    </div>
+<br>
+    <div>
+        <label for="lastName">LastName</label>
+        <input type="text" name="lastName" required maxlength="10" #lastName="ngModel"
+        pattern="^[a-zA-z]+$" [(ngModel)]="MyContact.lastName">
+    </div>
+
+        <div  *ngIf="!lastName.valid && (lastName.dirty||lastName.touched)" class="error">
+            <div *ngIf="lastName.errors?.['required']">
+                LastName is Required
+            </div>
+            <div *ngIf="lastName.errors?.['maxlength']">
+                Last NAme MAxlength is{{lastName.errors?.['maxlength']?.requiredLength}}
+            </div>
+
+            <div *ngIF="lastName.errors?.['pattern']">
+                only char are allowed
+
+            </div>
+        </div>
+
+<br>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" required email #email="ngModel"
+        [(ngModel)]="MyContact.email">
+
+    </div>
+    <div  *ngIf="!email.valid && (email?.dirty||email?.touched)" class="error">
+        <div *ngIf="email.errors?.['required']">
+            Email is Required
+        </div>
+        <div *ngIf="email.errors?.['email']">
+               Invalid Emil Address
+        </div>
+    </div>
+
+
+    <div>
+        <label for="gender">Gender</label>
+        <input type="radio" value="male" name="gender" #gender="ngModel" [(ngModel)]="MyContact.gender">Male
+        <input type="radio" value="female" name="gender" #gender="ngModel" [(ngModel)]="MyContact.gender">FeMale
+    </div>
+
+    <div *ngIf="!gender?.valid &&(gender?.dirty || gender?.touched)" class="error" >
+
+        <div *ngIf="gender.errors?.['required']">
+                Geneder is Must
+        </div>
+    </div>
+
+    <p>
+        <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </p>
+
+    <p>{{contactForm.valid}}</p>
+    <p>{{contactForm.value|json}}</p>

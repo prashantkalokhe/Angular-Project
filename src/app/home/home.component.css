@@ -1,0 +1,8 @@
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=022201&c2=aaaaaa&gt=c&gd=dtr
+*/
+h1{
+background: #022201;
+background: conic-gradient(from 45deg, #022201, #AAAAAA);
+}

@@ -1,0 +1,17 @@
+{
+    "dataemp":[{
+        "id":1,
+        "name":"Prashant",
+        "salary":75000
+    },{
+        "id":2,
+        "name":"Aadersh",
+        "salary":89000
+    },
+    {
+        "id":3,
+        "name":"Abhishek",
+        "salary":90000
+    }
+]
+}

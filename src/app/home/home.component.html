@@ -1,0 +1,129 @@
+<p>home works!</p>
+<!-- <app-login></app-login>
+interpolation -->
+
+<h1>{{name}}</h1>
+
+
+<div [attr.title]="hovervar">Hover Effect</div>
+
+<!-- //event binding -->
+<button (click)="alertMe()">Click Me</button>
+
+<br>
+<!-- property b inding -->
+<input type="   text" (keypress)="alertInput ()">
+
+<input type="   text" (keyup)="alertValue ($event)">
+
+<br>
+<!-- event binding  -->
+<button (click)="onMyClick()">Click Me</button>
+<br>
+<br>
+
+<img [src]="imageUrl" alt="image">
+
+<!-- bootstrap.bootstrap  -->
+<div class="container">
+  
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="https://www.gosomewhere.in/" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <!-- tWO WAy dATA Binding ng model -->
+
+Enter the Text:<input type="text" [(ngModel)]="data"><br><br>
+
+
+<h1>Data1={{data1}}</h1>
+
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && OnSubmit()" novalidate>
+  <div>
+      <label>FullNAme</label>
+      <input type="text" class="form-control" name="fullName" [(ngModel)]="form.fullName" required #fullName="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && fullName.errors}">
+      @if(f.submitted && fullName.errors)
+      {
+          @if(fullName.errors['required'])
+          {
+              <div>FullName is required</div>
+          }
+      }
+  </div>
+  
+  <div>
+      <label>USerName</label>
+      <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+      minlength="6" maxlength="20" #username="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && username.errors}"
+      >
+  
+      @if(f.submitted && username.errors)
+      {
+          @if(username.errors['required'])
+          {
+              <div>USerName is Required</div>
+          }
+          @if(username.errors['minlength'])
+          {
+              <div>UserName  must be at least 6 char</div>
+          }
+          @if(username.errors['maxlength'])
+          {
+              <div>UserName  must be at least 20 char</div>
+          }
+  
+      }
+  </div>
+  
+  <div>
+      <label>Email</label>
+      <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required email #email="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && email.errors}">
+      @if(f.submitted && email.errors)
+      {
+          @if(email.errors['required'])
+          {
+              <div>emailis required</div>
+          }
+          @if(email.errors['email'])
+          {
+              <div>Email is invalid</div>
+          }
+      }
+  </div>
+  
+  
+  <div>
+      <label>Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required #password="ngModel"
+      minlength="8"
+      [ngClass]="{'is-invalid':f.submitted && password.errors}">
+      @if(f.submitted && password.errors)
+      {
+          @if(password.errors['required'])
+          {
+              <div>password is required</div>
+          }
+          @if(password.errors['minlength'])
+          {
+              <div>Min 8 char required</div>
+          }
+      }
+  </div>
+  <div>
+      <input type="checkbox" class="form-control" name="acceptTerms" [(ngModel)]="form.acceptTerms"
+      class="form-check-input" required #acceptTerms="ngModel"
+      [ngClass]="{'is-invalid':f.submitted && acceptTerms.errors}">
+      <label>I Have read and agree to Terms</label>
+      @if(f.submitted && acceptTerms.errors)
+      {
+          <div>AcceptTerms is required</div>
+      }
+  </div>
+  
+  <div>
+      <button type="submit"  class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-warning float-right" (click)="OnReset(f)" >Reset</button>
+  </div>
+  

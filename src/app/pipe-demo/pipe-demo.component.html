@@ -1,0 +1,140 @@
+<p>pipe-demo works!</p>
+<!-- <app-studentform></app-studentform> -->
+
+<!-- <table>
+    <tr>
+    <th>Eid</th>
+    <th>Ename</th>
+    <th>Salary</th>
+</tr>
+<tr *ngFor="let emp of employee">
+<td>{{emp.eid}}</td>
+<td>{{emp.ename}}</td>
+<td>{{emp.salary}}</td>
+</tr>
+</table> -->
+
+<table>
+  <tr>
+    <th>Eid</th>
+    <th>Ename</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+    <td>{{emp.eid}}</td>
+    <td>{{emp.ename}}</td>
+    <td>{{emp.salary}}</td>
+  </tr>
+</table>
+<div>
+  <label for="eid">Employee ID:</label>
+  <input type="text" id="eid" name="eid" [(ngModel)]="newEmployee.eid">
+</div>
+<div>
+  <label for="ename">Employee Name:</label>
+  <input type="text" id="ename" name="ename" [(ngModel)]="newEmployee.ename">
+</div>
+<div>
+  <label for="salary">Salary:</label>
+  <input type="number" id="salary" name="salary" [(ngModel)]="newEmployee.salary">
+</div>
+<button (click)="addEmployee()">Add Employee</button>
+
+<h1>Pipe </h1>
+<p>{{"hello world "| uppercase}}</p>
+<p>{{"hello world "| lowercase}}</p>
+<p>{{"hello world "| titlecase}}</p>
+<p>{{"0.35 "| percent}}</p>
+<p>{{"ANgular is running "| slice: 0.7}}</p>
+<p>{{"300 "|percent}}</p>
+
+<h2>currency</h2>
+<p>{{num | currency}}</p>
+<p>{{num | currency:'USD'}}</p>
+<p>{{num | currency:'INR'}}</p>
+<p>{{num | currency:'GBP'}}</p>
+<p>{{num | currency:'INR':true:'2.3'}}</p>
+<h1>{{num |currency:'INR':true}}</h1>
+<h1>{{num |percent:'.2'}}</h1>
+
+<h3>date</h3>
+<p>{{currentDate}}</p>
+<p>{{currentDate | date}}</p>
+<p>{{currentDate | date:'shortDate'}}</p>
+<p>{{currentDate | date: 'fullDate'}}</p>
+<p>{{currentDate | date:'longDate'}}</p>
+<p>{{currentDate | date:'dd-mm-yyyy'}}</p>
+<p>{{currentDate | date:'mm-dd-yyyy'}}</p>
+<p>{{currentDate | date:'yyyy-mm-dd'}}</p>
+<p>{{currentDate | date:'mm-dd-yyyy'}}</p>
+
+
+<h1>Q1</h1>
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Ticket Cost</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies; let i=index">
+          <td>{{ movie.title }}</td>
+          <td>{{ movie.director }}</td>
+          <td>{{ movie.ticketCost }}</td>
+          <td>{{ movie.releaseDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="movies.length === 0">
+    <p>No movies available.</p>
+  </div>
+  
+  <div *ngIf="movies.length > 0">
+    <h2>Movies at odd positions:</h2>
+    <ul>
+      <li *ngFor="let movie of movies; let i=index">
+        <ng-container *ngIf="isOdd(i)">
+          {{ movie.title }} - {{ movie.director }} - {{ movie.ticketCost }} - {{ movie.releaseDate }}
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+
+
+  <h1>Q2</h1>
+
+  <!-- student.component.html -->
+
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students" [ngStyle]="{'background-color': student.marks > 60 ? 'lightgreen' : 'transparent'}">
+          <td>{{ student.id }}</td>
+          <td>{{ student.name }}</td>
+          <td>{{ student.marks }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="students.length === 0">
+    <p>No students available.</p>
+  </div>
+  
+<h1>Employee </h1>
+<!-- employee.component.html -->
+
+

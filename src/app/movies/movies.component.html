@@ -1,0 +1,67 @@
+<p>movies works!</p>
+<table style="margin-left: 3rem;">
+    <tbody>
+        <tr>
+            <th>Mid</th>
+            <th>MName</th>
+            <th>Ticket</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let mov of Movie">
+            <td>{{mov.mid}}</td>
+            <td>{{mov.mname}}</td>
+            <td>{{mov.ticket}}</td>
+            <td><input type="button"  value="Edit" class="btn btn-warning" (click)="editMov(mov)"> &nbsp;&nbsp;
+                <input type="button"  value="Delete" class="btn btn-danger" (click)="deleteMov(mov.mid)"></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<!-- original form -->
+<!-- <form [formGroup]="movform" (ngSubmit)="SaveData()">
+    <label for="id">MovieID</label>
+    <input type="text" placeholder="Movieid" required class="form-control" formControlName="mid"  id="mid">
+    
+    <label for="name">MovieName</label>
+    <input type="text" placeholder="MovieName" required class="form-control" formControlName="mname" id="mname">
+
+    <label for="Salary">Ticket</label>
+    <input type="text" placeholder="ticket" required class="form-control"  formControlName="ticket" id="ticket">&nbsp;<br>
+    <input type="submit"  class="btn btn-success"  value="AddMovie">&nbsp;&nbsp;
+
+    <input type="submit"  class="btn btn-light"  value="Update">&nbsp;&nbsp;
+    <input type="button"  class="btn btn-primary" value="Cancel"  (click)="clearForm()">
+</form> -->
+<div class="forms">
+<div>
+    <h3 style="text-align: center; color: cornflowerblue">Create Data</h3>
+<form [formGroup]="movform" (ngSubmit)="SaveData()" style="width: 20rem; margin-left: 3rem;">
+    <label for="id">MovieID</label>
+    <input type="text" placeholder="Movieid" required class="form-control" formControlName="mid"  id="mid">
+    
+    <label for="name">MovieName</label>
+    <input type="text" placeholder="MovieName" required class="form-control" formControlName="mname" id="mname">
+
+    <label for="Salary">Ticket</label>
+    <input type="text" placeholder="ticket" required class="form-control"  formControlName="ticket" id="ticket">&nbsp;<br>
+    <input type="submit"  class="btn btn-success"  value="AddMovie">&nbsp;&nbsp;
+    <input type="button"  class="btn btn-primary" value="Cancel"  (click)="clearForm()">
+</form>
+</div>
+<br><br>
+<div>
+    <h3 style="text-align: center; color: cornflowerblue;">Update Data</h3>
+<form [formGroup]="movform" (ngSubmit)="SaveData()" style="width: 20rem; margin-left: 3rem;">
+    <label for="id">MovieID</label>
+    <input type="text" placeholder="Movieid" required class="form-control" formControlName="mid"  id="mid">
+    
+    <label for="name">MovieName</label>
+    <input type="text" placeholder="MovieName" required class="form-control" formControlName="mname" id="mname">
+
+    <label for="Salary">Ticket</label>
+    <input type="text" placeholder="ticket" required class="form-control"  formControlName="ticket" id="ticket">&nbsp;<br>
+    <input type="submit"  class="btn btn-info"  value="Update">&nbsp;&nbsp;
+    <input type="button"  class="btn btn-primary" value="Cancel"  (click)="clearForm()">
+</form>
+</div>
+</div>
