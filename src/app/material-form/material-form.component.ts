@@ -1,17 +1,17 @@
+import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import { AbstractControl, FormBuilder, FormControl, FormGroup,  Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-forms',
+  selector: 'app-material-form',
   standalone: true,
   imports: [CommonModule,ReactiveFormsModule,MatCardModule],
-  templateUrl: './forms.component.html',
-  styleUrl: './forms.component.css'
+  templateUrl: './material-form.component.html',
+  styleUrl: './material-form.component.css'
 })
-export class FormsComponent implements OnInit {
+export class MaterialFormComponent  implements OnInit {
 
   form:FormGroup=new FormGroup(
     {

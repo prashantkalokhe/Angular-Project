@@ -7,12 +7,14 @@ import { FormsComponent } from './forms/forms.component';
 import { Login1Component } from './login1/login1.component';
 import { LoginComponent } from './login/login.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { MaterialDemoComponent } from './material-demo/material-demo.component';
+import { MaterialFormComponent } from './material-form/material-form.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,StudentformComponent,RouterModule,MoviesComponent,FormsComponent,Login1Component,LoginComponent,PipeDemoComponent],
+  imports: [RouterOutlet,HomeComponent,StudentformComponent,RouterModule,MoviesComponent,FormsComponent,Login1Component,LoginComponent,PipeDemoComponent,MaterialDemoComponent,MaterialFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

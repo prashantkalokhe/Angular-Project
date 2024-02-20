@@ -1,4 +1,4 @@
-<p>forms works!</p>
+<p>material-form works!</p>
 
 
 <form [formGroup]="form" (ngSubmit)="OnSubmit()">
@@ -51,6 +51,17 @@
             }
         }
     </div>
+
+    <div class="example-container">
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          @if (email.invalid) {
+            <mat-error>{{getErrorMessage()}}</mat-error>
+          }
+        </mat-form-field>
+      </div>
+
     <div>
         <label>Password</label>
         <input type="password" formControlName="password" class="form-control"
@@ -85,11 +96,3 @@
 
 </form>
 
-
-
-<h1>Material</h1>
-<mat-card>
-    <mat-card-content>Simple card</mat-card-content>
-  </mat-card>
-  
-  

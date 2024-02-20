@@ -1,0 +1,23 @@
+
+  /* Style for the h1 heading */
+  h1 {
+    color: #333; /* Text color */
+    font-size: 24px; /* Font size */
+    margin-bottom: 20px; /* Bottom margin */
+  }
+
+  /* Style for the mat-card */
+  mat-card {
+    width: 300px; /* Card width */
+    border-radius: 80px; /* Border radius */
+    box-shadow: 0 2px 4px #d328281a; /* Box shadow */
+  }
+
+  /* Style for the mat-card-content */
+  mat-card-content {
+    padding: 20px; /* Padding */
+    font-size: 16px; /* Font size */
+  }
+
+
+

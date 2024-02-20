@@ -6,6 +6,8 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { MoviesComponent } from './movies/movies.component';
 import { Login1Component } from './login1/login1.component';
 import { FormsComponent } from './forms/forms.component';
+import { MaterialDemoComponent } from './material-demo/material-demo.component';
+import { MaterialFormComponent } from './material-form/material-form.component';
 
 
 export const routes: Routes = [
@@ -15,7 +17,10 @@ export const routes: Routes = [
     {path:"pipe-demo",component:PipeDemoComponent},
     {path:"movies",component:MoviesComponent},
     {  path:"login1",component:Login1Component },
-    {  path:"forms",component:FormsComponent }
+    {  path:"forms",component:FormsComponent },
+    {  path:"material-demo",component:MaterialDemoComponent },
+    {  path:"material-form",component:MaterialFormComponent }
+
 
 
 ];
